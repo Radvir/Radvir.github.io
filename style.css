@@ -12,16 +12,20 @@ body{
     place-items: center;
 }
 
-.loading {
-    border: 8px solid #d1d0d0; /* Light gray */
-    border-top: 8px solid #292d30; /* Blue */
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 2s linear infinite;
+button {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 10px; /* adjust as needed for desired level of rounding */
+    font-size: larger;
+    border: none;
+    width: 200px; /* adjust as needed for desired size */
+    height: 80px; /* adjust as needed for desired size */
 }
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.translator {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 75%;
+    
 }
