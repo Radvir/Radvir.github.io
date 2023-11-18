@@ -13,6 +13,14 @@ function change_age() {
 setInterval(() => {
     let currentDate = new Date();
     let ageInMilliseconds = currentDate - birthDate;
-    let ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
-    num.innerHTML = `${ageInYears}`;
+    let ageInYears = (Math.floor((ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25))*(10**14)))/(10**14);
+    if (`${ageInYears}`.length != 17) {
+        let nulls = "";
+        for (let i = 0; i < 17-`${ageInYears}`.length; i++) {
+            nulls += "0";
+        }
+        num.innerHTML = `${ageInYears}` + nulls;
+    } else{
+        num.innerHTML = `${ageInYears}`;
+    }
 }, 50);
